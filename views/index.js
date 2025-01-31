@@ -173,6 +173,12 @@ const createHomepageTemplate = () => /*html*/`
          
           <!-- form template here later -->
         </div>
+        <form hx-post="/api/y_res" hx-target="#messages" hx-swap="beforeend">
+            <input type="text" name="message" placeholder="Введите ваше сообщение">
+            <button type="submit">Отправить</button>
+        </form>
+        <br>
+        <div id="messages"></div>
       </main>
     </body>
   </html>
