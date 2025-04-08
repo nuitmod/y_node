@@ -144,6 +144,9 @@ const createHomepageTemplate = () => /*html*/`
         </section>
       </amp-accordion>
       <amp-img height="59" width="38" src="../img/mod.jpg" style="opacity:0.9"></amp-img>
+      <amp-img height="59" width="48" src="../img/y2.GIF" style="opacity:0.9"></amp-img>
+      <amp-img height="59" width="98" src="../img/y3.JPG" style="opacity:0.9"></amp-img>
+      <amp-img height="59" width="48" src="../img/y1.GIF" style="opacity:0.9"></amp-img>
       <amp-accordion class="main" disable-session-states>
         <section class="">
             <h6 class="amp_a">.</h6>
@@ -177,7 +180,7 @@ const createHomepageTemplate = () => /*html*/`
          
           <!-- form template here later -->
         </div>
-        <form hx-post="/api/y_res" hx-target="#messages" hx-swap="beforeend">
+        <form hx-post="/api/y_res" hx-target="#messages" hx-swap="beforeend" hx-on:htmx:afterRequest="this.reset()">
             <input type="text" name="message" placeholder="Введите ваше сообщение">
             <button type="submit">Отправить</button>
         </form>
